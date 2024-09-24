@@ -49,27 +49,28 @@ class AdminController extends Controller
 
     // ----------------------------------------------------------------
 
-    // public function edit_category($id){
+    public function edit_category($id){
 
-    //     $data = Category::find($id);
+        $data = Category::find($id);
+        return view('admin.edit_category',compact('data'));
 
-    //     return view('admin.edit_category',compact('data'));
-    // }
+        // return view('admin.edit_category');
+    }
 
     // ----------------------------------------------------------------
 
-    // public function update_category(Request $request, $id){
-    //     $data = Category::find($id);
+    public function update_category(Request $request, $id){
+        $data = Category::find($id);
 
-    //     // category is the name here ->( <input type="text" name="category" value="{{ $data->category_name }}"> ) in resources\views\admin\edit_category.blade.php
-    //     $data->category_name= $request->category;
+        // category is the name here ->( <input type="text" name="category" value="{{ $data->category_name }}"> ) in resources\views\admin\edit_category.blade.php
+        $data->category_name= $request->category;
 
-    //     $data->save();
+        $data->save();
 
-    //     toastr()->timeOut(5000)->closeButton()->addSuccess('Category Updated successfully');
+        toastr()->timeOut(5000)->closeButton()->addSuccess('Category Updated successfully');
 
-    //     return redirect('/view_category');
-    // }
+        return redirect('/view_category');
+    }
 
     // ----------------------------------------------------------------
 
