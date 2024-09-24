@@ -18,6 +18,7 @@
         {{-- <li><a href="{{ url('#') }}"> <i class="icon-grid"></i>Products </a></li> --}}
 
         {{-- <li><a href="tables.html"> <i class="icon-grid"></i>Tables </a></li>
+        
         <li><a href="charts.html"> <i class="fa fa-bar-chart"></i>Charts </a></li>
         <li><a href="forms.html"> <i class="icon-padnote"></i>Forms </a></li> --}}
 
