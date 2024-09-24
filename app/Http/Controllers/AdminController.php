@@ -31,7 +31,7 @@ class AdminController extends Controller
 
         // toastr()->timeOut(5000)->closeButton()->addWarning('Category added successfully');
         // toastr()->timeOut(5000)->closeButton()->addInfo('Category added successfully');
-        // toastr()->timeOut(5000)->closeButton()->addSuccess('Category added successfully');
+        toastr()->timeOut(5000)->closeButton()->addSuccess('Category added successfully');
 
         return redirect()->back();
     }
