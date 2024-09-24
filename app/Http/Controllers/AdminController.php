@@ -74,41 +74,41 @@ class AdminController extends Controller
 
     // ----------------------------------------------------------------
 
-    // public function add_product(){
+    public function add_product(){
 
-    //     $category = Category::all();
+        $category = Category::all();
 
-    //     return view('admin.add_product',compact('category'));
-    // }
+        return view('admin.add_product',compact('category'));
+    }
 
     // request $request because it is a POST method
     // ----------------------------------------------------------------
 
-    // public function upload_product(Request $request){
-    //     $data = new Product;
+    public function upload_product(Request $request){
+        $data = new Product;
 
-    //     // $data->column_name in db = $request->name inside form in add_product.php  
-    //     $data->title = $request->title;
-    //     $data->description = $request->description;
-    //     $data->price = $request->price;
-    //     $data->quantity = $request->quantity;
-    //     $data->category = $request->category;
+        // $data->column_name in db = $request->name inside form in add_product.php  
+        $data->title = $request->title;
+        $data->description = $request->description;
+        $data->price = $request->price;
+        $data->quantity = $request->quantity;
+        $data->category = $request->category;
 
-    //     $image = $request->image;
-    //     if($image){
-    //         $image_name = time().'.'.$image->getClientOriginalExtension();
-    //         $request->image->move('products', $image_name);
+        $image = $request->image;
+        if($image){
+            $image_name = time().'.'.$image->getClientOriginalExtension();
+            $request->image->move('products', $image_name);
 
-    //         // follows same pattern as above 
-    //         $data->image = $image_name;
-    //     }
+            // follows same pattern as above 
+            $data->image = $image_name;
+        }
 
-    //     $data->save();
+        $data->save();
 
-    //     toastr()->timeOut(5000)->closeButton()->addSuccess('Product Added successfully');
+        toastr()->timeOut(5000)->closeButton()->addSuccess('Product Added successfully');
 
-    //     return redirect()->back();
-    // }
+        return redirect()->back();
+    }
 
     // ----------------------------------------------------------------
 
